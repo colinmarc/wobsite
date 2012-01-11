@@ -1,0 +1,50 @@
+body {
+	background: #FFF url('pattern.jpg') left repeat;
+	font-family: 'Buenard', serif;
+	color: white;
+}
+
+a {
+	color: white;
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}
+
+#header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	
+	height: 100px;
+	padding: 20px;
+	
+	background-color: rgba(0,0,0,0.6);
+}
+
+#header h1 {
+	margin: 0;
+	font-weight: 700;
+	font-size: 5em;
+}
+
+#header .right {
+	float: right;
+}
+
+#content {
+	width: 600px;
+	margin: 200px auto;
+}
+
+div .block {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 20px;
+	margin-bottom: 40px;
+	background-color: rgba(0,0,0,0.6);
+	color: white;
+}
