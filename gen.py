@@ -42,6 +42,6 @@ def generate_page(d):
 ls = os.listdir('.')
 pages = []
 for l in ls:
-	if not os.path.isdir(l) or l == 'html': continue
+	if not os.path.isdir(l) or l == 'html' or l[0] == '.': continue
 	generate_page(l)
 	
