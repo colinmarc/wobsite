@@ -12,6 +12,17 @@ a:hover {
 	text-decoration: none;
 }
 
+ul {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 1em;
+	text-indent: 0;
+}
+
+li:before {
+	content: "\00BB \0020";
+}
+
 #header {
 	position: absolute;
 	left: 0;
