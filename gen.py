@@ -10,7 +10,7 @@ with open('base.tmpl') as tmpl:
 def parse_file(path):
 	with open(path) as f:
 		doc = f.read()
-		
+
 	metadata, content = doc.split('\n...\n')
 	
 	block = yaml.load(metadata)

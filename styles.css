@@ -20,7 +20,7 @@ ul {
 }
 
 li:before {
-	content: "\00BB \0020";
+	content: "»  ";
 }
 
 #header {
@@ -29,10 +29,10 @@ li:before {
 	top: 0;
 	right: 0;
 	
-	height: 100px;
+	height: 120px;
 	padding: 20px;
 	
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.7);
 }
 
 #header h1 {
@@ -50,12 +50,17 @@ li:before {
 	margin: 200px auto;
 }
 
-div .block {
+div.block {
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	padding: 20px;
 	margin-bottom: 40px;
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.7);
 	color: white;
 }
+
+div.block img {
+	margin: 10px auto;
+	max-width: 560px;
+} 
