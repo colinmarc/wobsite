@@ -24,6 +24,13 @@ def parse_file(path):
 	return block
 
 def generate_page(d):
+	if(d == 'wobsite'): 
+		html_file = 'index.html'
+	else:
+		html_file = d+'.html'
+
+	print('generating ' + html_file)
+
 	files = os.listdir(d)
 	blocks = []
 	
@@ -32,16 +39,12 @@ def generate_page(d):
 	
 	blocks = reversed(sorted(blocks, key=lambda block: block['date']))	
 	
-	if(d == 'wobsite'): 
-		html_file = 'index.html'
-	else:
-		html_file = d+'.html'
-	with open(html_file, 'w') as outfile:
+	with open('out/' + html_file, 'w') as outfile:
 		outfile.write(str(Template(template, {'blocks': blocks})))
 
 ls = os.listdir('.')
 pages = []
 for l in ls:
-	if not os.path.isdir(l) or l == 'html' or l[0] == '.': continue
+	if not os.path.isdir(l) or l in ['out', 'resources'] or l[0] == '.': continue
 	generate_page(l)
 	
