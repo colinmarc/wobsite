@@ -1,8 +1,6 @@
 date: 10/01/2008
 title: The Kingly State
 ...
-The Kingly State
-----------------
 October 2008
 
 When from the moon, I look below,  

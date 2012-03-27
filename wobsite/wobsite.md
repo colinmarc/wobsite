@@ -1,8 +1,7 @@
 date: 1/10/2012
 time: 8:13 PM
+title: It's my brand new wobsite!
 ...
-It's my brand new wobsite!
---------------------------
 
 ...and it's a work in progress. 
 

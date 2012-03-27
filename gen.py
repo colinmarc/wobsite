@@ -23,7 +23,9 @@ def parse_file(path):
 
 	return block
 
-def generate_page(d):
+def generate_dir(d):
+	os.mkdir(os.path.join('out', d))
+
 	if(d == 'wobsite'): 
 		html_file = 'index.html'
 	else:
@@ -35,16 +37,27 @@ def generate_page(d):
 	blocks = []
 	
 	for file in files:
-		blocks.append(parse_file(os.path.join(d, file)))
+		page = os.path.join(d, file.replace('.md', '.html'))
+		print('generating ' + page)
+
+		block = parse_file(os.path.join(d, file))
+		block['link'] = page
+
+		blocks.append(block)
+		make_page(page, [block])
 	
 	blocks = reversed(sorted(blocks, key=lambda block: block['date']))	
+	make_page(html_file, blocks)
 	
+def make_page(html_file, blocks):
 	with open('out/' + html_file, 'w') as outfile:
 		outfile.write(str(Template(template, {'blocks': blocks})))
+
+os.system('rm -r out; mkdir out')
 
 ls = os.listdir('.')
 pages = []
 for l in ls:
 	if not os.path.isdir(l) or l in ['out', 'resources'] or l[0] == '.': continue
-	generate_page(l)
+	generate_dir(l)
 	

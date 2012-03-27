@@ -1,8 +1,6 @@
 date: 5/01/2010
 title: She Must Accept Some Swirling Ink
 ...
-She Must Accept Some Swirling Ink
----------------------------------
 May 2010
 
 Before the caustic brute she cowers.  
